@@ -45,6 +45,8 @@ def parser_dnb(data):
             # They always include the city first, perhaps we should remove it?
             elif re.search(r"<strong>Verlag</strong>", line):
                 publisher = re.findall('td .*>(.*)</td', line)[0]
+                if ':' in publisher:
+                    publisher = publisher.split(':')[1].strip()
                 recs['Publisher'] = u(publisher)
             # Title:
             #<td width="25%" class='yellow'><strong>Titel</strong>
