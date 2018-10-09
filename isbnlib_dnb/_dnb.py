@@ -51,7 +51,7 @@ def parser_dnb(data):
             #</td><td class='yellow'>Kindergartenblock - Verbinden, vergleichen, Fehler finden ab 4 Jahre / Linda Bayerl</td></tr>
             elif re.search(r"<strong>Titel</strong", line):
                 title = re.findall('td .*>(.*)/.*</td', line)[0]
-                publisher = u(title.replace('td >', '').replace('</td', ''))
+                title = u(title.replace('td >', '').replace('</td', ''))
                 recs['Title'] = u(title)
             # Publication year:
             #<td width="25%" class='yellow'><strong>Zeitliche Einordnung</strong>
