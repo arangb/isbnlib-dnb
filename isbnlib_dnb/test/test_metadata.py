@@ -13,8 +13,8 @@ def test_query():
     assert_equals(len(repr(query('9781849692341'))) == 2, True)
     assert_equals(len(repr(query('9781849692343'))) == 2, True)
 
-    assert_equals(len(repr(query('9788491043508'))) > 100, True)
-    assert_equals(len(repr(query('9788437604947'))) > 100, True)
-    assert_equals(len(repr(query('9788474234046'))) > 100, True)
+    assert_equals(len(repr(query('9783897215672'))) > 100, True)
+    assert_equals(len(repr(query('9783658161408'))) > 100, True)
+    assert_equals(len(repr(query('9783788804312'))) > 100, True)
 
     assert_equals(len(repr(query('9780000000'))) == 2, True)
