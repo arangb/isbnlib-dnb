@@ -45,13 +45,16 @@ def parser_dnb(data):
             # They always include the city first, perhaps we should remove it?
             elif re.search(r"<strong>Verlag</strong>", line):
                 publisher = re.findall('td .*>(.*)</td', line)[0]
+                # get only the publisher's name
+                if ':' in publisher:
+                    publisher = publisher.split(':')[1].strip()
                 recs['Publisher'] = u(publisher)
             # Title:
             #<td width="25%" class='yellow'><strong>Titel</strong>
             #</td><td class='yellow'>Kindergartenblock - Verbinden, vergleichen, Fehler finden ab 4 Jahre / Linda Bayerl</td></tr>
             elif re.search(r"<strong>Titel</strong", line):
                 title = re.findall('td .*>(.*)/.*</td', line)[0]
-                publisher = u(title.replace('td >', '').replace('</td', ''))
+                title = u(title.replace('td >', '').replace('</td', ''))
                 recs['Title'] = u(title)
             # Publication year:
             #<td width="25%" class='yellow'><strong>Zeitliche Einordnung</strong>
