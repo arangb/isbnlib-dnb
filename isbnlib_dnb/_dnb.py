@@ -23,7 +23,7 @@ def parser_dnb(data):
     try:
         for line in data:
             line = line.replace('\n', ' ').replace('\t', '')
-            if len(recs) == 4:  # skip the rest of the file if we have all recs
+            if len(recs) == 5:  # skip the rest of the file if we have all recs
                 break
             # Author:
             #<td width="25%" ><strong>Person(en)</strong></td>
@@ -60,6 +60,12 @@ def parser_dnb(data):
             #</td><td class='yellow'>Erscheinungsdatum: 2015</td></tr>
             elif re.search(r"<strong>Zeitliche Einordnung</strong", line):
                 recs['Year'] = u(re.findall(r'\d{4}', line)[0])
+            # Language:
+            #<tr><td class="yellow" width="25%"> <strong>Sprache(n)</strong>
+            #</td> <td class="yellow"> Deutsch (ger) </td></tr>
+            elif re.search(r"<strong>Sprache\(n\)</strong", line):
+                language = re.findall(r'td.*>(.*)</td', line)[0].strip()
+                recs['Language'] = u(language)
             elif line == '':
                 continue
 
