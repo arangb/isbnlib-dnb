@@ -5,14 +5,14 @@
 
 from .._dnb import query
 
-
-def test_mcu():
+def test_dnb():
     """Simple tests for some remarkable cases."""
-    print(query('9783897215672'))
-    print(query('9783658161408'))
-    print(query('9783788804312'))
-
-
+    #print(query('9783897215672'))
+    #print(query('9783658161408'))
+    #print(query('9783788804312'))
+    print(query('9783437583032'))
+    #print(query('365816140X'))
+    #print(query('978-3-9818084-4-5')) # two languages
 
 if __name__ == '__main__':
-    test_mcu()
+    test_dnb()
