@@ -101,5 +101,3 @@ def query(isbn):
         LOGGER.debug('No data from DNB for isbn %s', isbn)
         return {}
     return _mapper(isbn, data)
-
-print(query("9783437583032"))
