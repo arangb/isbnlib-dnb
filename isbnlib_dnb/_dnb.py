@@ -63,8 +63,11 @@ def parser_dnb(data):
             # Language:
             #<tr><td class="yellow" width="25%"> <strong>Sprache(n)</strong>
             #</td> <td class="yellow"> Deutsch (ger) </td></tr>
+            #</td> <td class="yellow"> Englisch (eng), Neugriechisch (gre) </td></tr>
             elif re.search(r"<strong>Sprache\(n\)</strong", line):
-                language = re.findall(r'td.*>(.*)</td', line)[0].strip()
+                # There can be more than one language, so match all possible cases:
+                langs = re.findall(r'>* \((.*?)\)',line) # array with all matches
+                language = ','.join(langs)
                 recs['Language'] = u(language)
             elif line == '':
                 continue
