@@ -5,6 +5,7 @@
 
 from .._dnb import query
 
+
 def test_dnb():
     """Simple tests for some remarkable cases."""
     #print(query('9783897215672'))
@@ -13,6 +14,7 @@ def test_dnb():
     print(query('9783437583032'))
     #print(query('365816140X'))
     #print(query('978-3-9818084-4-5')) # two languages
+
 
 if __name__ == '__main__':
     test_dnb()

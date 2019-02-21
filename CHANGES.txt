@@ -1,1 +1,2 @@
+v0.0.2, 2019-02-21 -- Added language field to list of returned data.
 v0.0.1, 2018-10-06 -- Initial alpha release.

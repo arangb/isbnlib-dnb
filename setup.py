@@ -27,7 +27,7 @@ setup(
     author='arangb',
     author_email='arangbellido@gmail.com',
     url='https://github.com/arangb/isbnlib-dnb',
-    download_url='https://github.com/arangb/isbnlib-dnb/archive/v0.0.1.zip',
+    download_url='https://github.com/arangb/isbnlib-dnb/archive/v0.0.2.zip',
     packages=['isbnlib_dnb/'],
     entry_points={'isbnlib.metadata': ['dnb=isbnlib_dnb:query']},
     install_requires=["isbnlib>=3.9.3,<3.10.0"],
