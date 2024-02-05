@@ -3,7 +3,7 @@
 # pylint: skip-file
 from ._dnb import query
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 
 __plugin_author__ = 'arangb'
 __plugin_description__ = 'Metadata for German books from portal.dnb.de/opac.htm'
