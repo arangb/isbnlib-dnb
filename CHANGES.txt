@@ -1,4 +1,4 @@
-v0.0.5, 2023-02-04 -- Fixed \" to %20 in SERVICE_URL, moved to pytest
+v0.0.6, 2023-02-04 -- Fixed \" to %20 in SERVICE_URL, moved to pytest
 v0.0.4, 2020-11-15 -- allow isbnlib 3.10.*
 v0.0.3, 2019-02-21 -- Added language field to list of returned data.
 v0.0.1, 2018-10-06 -- Initial alpha release.
